@@ -8,9 +8,9 @@ RTL SCHEMATIC :
 
 CODE :
 module counter(
-    input clk,              // Clock input to increment the counter
-    input rstn,             // Active-low reset input to reset the counter to zero
-    output reg [3:0] out   // 4-bit output to show the counter value
+    input clk,              
+    input rstn,            
+    output reg [3:0] out  
 );
 
   // Always block triggered at the rising edge of the clock
