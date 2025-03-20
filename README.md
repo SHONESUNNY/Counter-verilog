@@ -7,7 +7,7 @@ RTL SCHEMATIC :
 ![image](https://github.com/user-attachments/assets/58edb96f-780b-468f-8db5-25ccb631d7d1)
 
 CODE :
-#{module counter(
+module counter(
     input clk,              
     input rstn,            
     output reg [3:0] out  
@@ -38,7 +38,7 @@ module tb_counter;
   // Stimulus generation in initial block
   initial begin
     clk = 0;              // Initialize clock to 0
-    rstn = 0;             // Initialize reset to 0}#
+    rstn = 0;             // Initialize reset to 0
 
     #20 rstn = 1;         // Assert reset after 20ns
     #80 rstn = 0;         // Deassert reset after 80ns
