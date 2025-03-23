@@ -5,14 +5,16 @@ A 4-bit Verilog counter is a digital device that counts from 0 to 15 in binary. 
 
 RTL SCHEMATIC : 
 ![image](https://github.com/user-attachments/assets/58edb96f-780b-468f-8db5-25ccb631d7d1)
+![Screenshot 2025-03-16 235104](https://github.com/user-attachments/assets/0107e10d-35c9-4bcd-8dfd-db12b6ff5819)
 
 CODE :
+```verilog
 module counter(
     input clk,              
     input rstn,            
     output reg [3:0] out  
 );
-
+  
   // Always block triggered at the rising edge of the clock
   always @ (posedge clk) begin
     if (!rstn)              // If reset is active (low), set counter to zero
@@ -46,7 +48,6 @@ module tb_counter;
 
     #200 $finish;          // End simulation after 200ns
   end
-endmodule
+endmodule                      
 
-![Screenshot 2025-03-16 235104](https://github.com/user-attachments/assets/0107e10d-35c9-4bcd-8dfd-db12b6ff5819)
 
